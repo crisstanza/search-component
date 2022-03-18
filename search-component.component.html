@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="all" href="search-component.component.css" />
+		<script type="text/javascript" src="search-component.component.js"></script>
+	</head>
+	<body>
+
+		<label for="country">Choose a country:</label>
+
+		<search-component>
+			<section>
+				<label><input id="country" readonly="readonly" type="text" /><input type="hidden" /><a href="#">&#11199;</a></label>
+				<label><input type="text" placeholder="search" /><a href="#">&#11199;</a></label>
+			</section>
+			<output class="no-results hide">
+				<span>no results found</span>
+			</output>
+			<output class="loading hide">
+				<span>loading...</span>
+				<span></span>
+			</output>
+			<output class="results hide">
+				<header>
+					<div>Total: <span class="found">?</span>/<span class="total">?</span></div>
+				</header>
+				<section>
+					<label data-value="?">
+						<span>?</span>
+						<span>?</span>
+					</label>
+				</section>
+				<footer>
+					<div>Showing: <span class="start">?</span>-<span class="end">?</span></div>
+					<div>Page: <span class="page">?</span>/<span class="pages">?</span> <nav><a href="#" title="previous">&#9664;</a> <a href="#" title="next">&#9654;</a></nav></div>
+				</footer>
+			</output>
+		</search-component>
+
+	</body>
+</html>

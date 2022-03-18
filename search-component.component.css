@@ -1,0 +1,199 @@
+* {
+	font-family: sans-serif;
+}
+
+search-component * {
+	box-sizing: border-box;
+}
+
+search-component *:focus {
+	outline: thin dotted;
+	_outline: none;
+}
+
+search-component {
+	width: 200px;
+	margin: auto;
+
+	padding: 5px;
+	display: block;
+	_width: fit-content;
+	_max-width: min-content;
+	_border: 1px dotted gray;
+}
+
+search-component > section {
+	display: flex;
+	line-height: 0;
+}
+
+search-component > section > label:nth-child(1) {
+	white-space: nowrap;
+	width: 50%;
+	padding-right: 2px;
+	transition: width 0.25s;
+}
+search-component > section > label:nth-child(2) {
+	white-space: nowrap;
+	width: 50%;
+	padding-left: 2px;
+	transition: width 0.25s;
+}
+
+search-component > section > label a {
+	position: relative;
+	right: 17px;
+}
+
+search-component input[readonly] {
+	width: 100%;
+	padding-right: 17px;
+	cursor: default;
+}
+search-component input:not([readonly]) {
+	width: 100%;
+	padding-right: 17px;
+}
+
+search-component input {
+	border: 1px solid purple;
+}
+search-component input:focus {
+	border: 1px solid red;
+	background-color: antiquewhite;
+}
+
+search-component output {
+	display: block;
+	margin-top: 2px;
+	_border: 1px solid red;
+}
+search-component output.results section {
+	overflow-y: scroll;
+	overflow-x: auto;
+	max-height: 201px;
+}
+
+search-component output.results label, search-component output.results label span {
+	display: block;
+}
+
+search-component output.results label:hover {
+	background-color: gray;
+	cursor: pointer;
+}
+
+search-component output.results label.current {
+	background-color: lightgreen;
+}
+search-component output.results label.current:hover {
+	background-color: green;
+}
+
+search-component output.results label {
+	border: 1px solid rgb(53, 53, 53);
+}
+search-component output.results header, search-component output.results footer {
+	border: 1px solid rgb(53, 53, 53);
+	padding: 2px;
+    font-size: 0.75em;
+	background-color: #B1B1B1;
+}
+search-component output.results footer nav {
+	float: right;
+}
+search-component output.results footer nav a, search-component > section > label a {
+	color: black;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+search-component output.results label span:first-child {
+	_border: 1px dashed blue;
+	background-color: rgba(169, 169, 169, 0.5);
+	padding: 2px;
+}
+
+search-component output.results label span:last-child {
+	_border: 1px dashed blue;
+	font-size: 0.75em;
+	background-color: rgba(211, 211, 211, 0.5);
+	padding: 2px;
+}
+
+search-component a.off {
+	opacity: 0.5;
+	cursor: default;
+}
+
+search-component output.loading, search-component output.no-results {
+	font-size: 0.75em;
+	background-color: #EDEDED;
+	text-align: center;
+	width: inherit;
+	border: 1px solid black;
+	padding: 4px 0 4px 0;
+}
+
+search-component output.loading > span:first-child {
+	display: block;
+	position: absolute;
+	width: inherit;
+	line-height: 100px;
+}
+
+search-component output.loading > span:last-child {
+	display: inline-block;
+	border: 8px solid lightgray;
+	border-top: 8px solid gray;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	margin-bottom: -3px;
+	animation: spin 3.5s linear infinite;
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+/*
+.fadeIn {
+	animation: fadeIn 0.25s linear;
+}
+.fadeOut {
+	animation: fadeOut 0.25s linear;
+}
+
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@keyframes fadeOut {
+	0% { opacity: 1; }
+	100% { opacity: 0; }
+}
+*/
+
+.wide75 {
+	width: 65% !important;
+}
+.wide25 {
+	width: 35% !important;
+}
+
+/*
+@keyframes wide75 {
+	0% {}
+	100% { width: 60%; }
+}
+@keyframes wide25 {
+	0% {}
+	100% { width: 40%; }
+}
+*/
+
+search-component .hide {
+	display: none;
+}
